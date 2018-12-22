@@ -314,3 +314,15 @@ on property:persist.sys.display_gamma=1
 
 on property:persist.sys.display_gamma=2
     write /sys/class/graphics/fb0/msm_fb_gamma 2
+
+service nv_mac /vendor/bin/nv_mac
+    class late_start
+    user system
+    group system inet net_admin wifi net_raw
+    oneshot
+
+service copy_macaddress-sh /vendor/bin/sh /vendor/bin/init.copy_macaddress.sh
+    class main
+    user root
+    group root system
+    oneshot
