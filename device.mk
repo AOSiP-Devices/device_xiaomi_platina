@@ -148,6 +148,10 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap
 
+# Charger
+PRODUCT_PACKAGES += \
+    init.leds.sh
+
 # CNE
 PRODUCT_PACKAGES += \
     cneapiclient \
@@ -305,6 +309,10 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Panel
+PRODUCT_PACKAGES += \
+    init.panel_info.sh
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3-service.platina-libperfmgr
@@ -377,6 +385,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
     android.hardware.sensors@1.0-service
+
+PRODUCT_PACKAGES += \
+    init.qcom.sensors.sh
 
 # Telephony
 PRODUCT_PACKAGES += \
