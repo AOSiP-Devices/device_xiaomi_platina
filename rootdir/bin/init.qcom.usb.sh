@@ -73,6 +73,8 @@ fi
 #
 # Override USB default composition
 #
+debuggable="1"
+
 # If USB persist config not set, set default configuration
 if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 	"$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
