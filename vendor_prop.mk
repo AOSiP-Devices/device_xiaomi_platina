@@ -272,10 +272,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.pickup=true
 
-# HAL1 apps list
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.hal1.packagelist=org.codeaurora.snapcam
-
 # Enable HAL3
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.HAL3.enabled=1 \
@@ -283,7 +279,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Expose aux camera for below packages
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi,org.lineageos.snap
 
 # Disable UBWC for camera
 PRODUCT_PROPERTY_OVERRIDES += \
