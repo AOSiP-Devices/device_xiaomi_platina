@@ -1,0 +1,9 @@
+# Thermal engine
+type thermal_prop, property_type;
+
+# Spectrum
+type spectrum_prop, property_type;
+
+# Power
+type diag_prop, property_type;
+type power_prop, property_type;
