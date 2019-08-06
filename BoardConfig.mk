@@ -233,6 +233,10 @@ WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# Vendor init
+TARGET_INIT_VENDOR_LIB := libinit_platina
+TARGET_RECOVERY_DEVICE_MODULES := libinit_platina
+
 # Enable dex pre-opt to speed up initial boot
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
@@ -242,6 +246,8 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
 
 # inherit from the proprietary version
 -include vendor/xiaomi/platina/BoardConfigVendor.mk
